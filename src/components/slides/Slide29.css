@@ -164,6 +164,10 @@
   gap: 16px;
 }
 
+.slide29 .s29-kpi-card.after .s29-kpi-metrics {
+  grid-template-columns: 1fr 1.2fr 1.2fr;
+}
+
 .slide29 .s29-metric {
   display: flex;
   flex-direction: column;
@@ -172,7 +176,7 @@
 
 .slide29 .s29-metric-val {
   font-family: 'Unbounded', 'Inter', sans-serif;
-  font-size: 20px;
+  font-size: 18px; /* Уменьшил немного, чтобы влезла цена */
   line-height: 1;
   font-weight: 700;
   letter-spacing: -0.5px;

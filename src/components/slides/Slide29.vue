@@ -14,6 +14,17 @@ const chartData = [
   { label: 'Сен', budget: 0, visits: 0.2, calls: 0.2 }
 ]
 
+const totalVisits = computed(() => {
+  const sum = chartData.reduce((acc, d) => acc + d.visits, 0)
+  return sum.toFixed(1).replace('.', ',')
+})
+
+const costPerVisit = computed(() => {
+  const sum = chartData.reduce((acc, d) => acc + d.visits, 0)
+  const budget = 2600000 // Из карточки "Бюджет ЖК"
+  return Math.round(budget / sum).toLocaleString('ru-RU')
+})
+
 const width = 500
 const height = 300
 const padX = 20
@@ -55,11 +66,11 @@ const callsPath = computed(() => {
             <p>Видео-реклама для премиального жилого комплекса</p>
             <div class="s29-mediaplan">
               <div class="s29-mp-item">
-                <b>1 600 000 ₽</b>
+                <b>2 600 000 ₽</b>
                 <span>Бюджет ЖК (Янв-Фев)</span>
               </div>
               <div class="s29-mp-item">
-                <b>960 000</b>
+                <b>1 560 000</b>
                 <span>Просмотров видео</span>
               </div>
             </div>
@@ -93,8 +104,12 @@ const callsPath = computed(() => {
             <div class="s29-kpi-head">РЕЗУЛЬТАТ ТАРГЕТИНГА</div>
             <div class="s29-kpi-metrics">
               <div class="s29-metric">
-                <span class="s29-metric-val">7</span>
+                <span class="s29-metric-val">{{ totalVisits }}</span>
                 <span class="s29-metric-lbl">визитов в офис<br>(Post-View)</span>
+              </div>
+              <div class="s29-metric">
+                <span class="s29-metric-val">{{ costPerVisit }} ₽</span>
+                <span class="s29-metric-lbl">цена одного<br>визита</span>
               </div>
               <div class="s29-metric">
                 <span class="s29-metric-val">6 мес.</span>
