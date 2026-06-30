@@ -1,0 +1,443 @@
+.slide19 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #f6f7ef;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #040506;
+}
+
+.slide19 .s19-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(680px 430px at 20% 34%, rgba(180,224,25,0.06), transparent 76%),
+    radial-gradient(620px 420px at 78% 54%, rgba(180,224,25,0.07), transparent 78%),
+    #040506;
+}
+
+.slide19 .s19-grid {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000 20%, transparent 80%);
+}
+
+.slide19 .s19-wrap {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 60px 80px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.slide19 .s19-head h1 {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.slide19 .s19-head p {
+  margin: 0;
+  color: #8b9298;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 280px;
+}
+
+.slide19 .s19-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px;
+}
+
+.slide19 .s19-card {
+  background: #111214;
+  border: 1px solid rgba(255,255,255,0.03);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  box-sizing: border-box;
+}
+
+.slide19 .s19-card-head h2 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.slide19 .s19-card-head span {
+  font-size: 13px;
+  color: #6a7177;
+}
+
+.slide19 .s19-preview {
+  flex: 1;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* =========================================
+   MOCKUPS BASE
+   ========================================= */
+.slide19 .s19-mockup {
+  position: absolute;
+  inset: 0;
+  background: #18191c;
+  border: 1px solid rgba(255,255,255,0.02);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+/* Base green banner */
+.slide19 .s19-banner-green {
+  position: relative;
+  background: #608d3e;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0 12px;
+  overflow: hidden;
+}
+
+/* Fake 3D "chair" shadow effect inside banner */
+.slide19 .s19-banner-green::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  bottom: -4px;
+  width: 48px;
+  height: 36px;
+  background: #507733;
+  border-radius: 8px 8px 0 0;
+  box-shadow: -4px 0 8px rgba(0,0,0,0.15);
+  opacity: 0.9;
+}
+
+.slide19 .s19-banner-green strong {
+  position: relative;
+  z-index: 1;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.slide19 .s19-banner-green .btn {
+  position: relative;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  background: #1a1b1e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: #fff;
+}
+
+/* Helpers for skeleton lines */
+.slide19 .m-line {
+  display: block;
+  height: 8px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+}
+.slide19 .m-box {
+  display: block;
+  height: 20px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 4px;
+}
+.slide19 .w-30 { width: 30%; }
+.slide19 .w-40 { width: 40%; }
+.slide19 .w-50 { width: 50%; }
+.slide19 .w-60 { width: 60%; }
+.slide19 .w-70 { width: 70%; }
+.slide19 .w-80 { width: 80%; }
+.slide19 .w-100 { width: 100%; }
+.slide19 .ml-auto { margin-left: auto; }
+.slide19 .mt-4 { margin-top: 16px; }
+
+/* =========================================
+   1. BROWSER
+   ========================================= */
+.slide19 .mockup-browser {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.slide19 .mockup-browser .m-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.slide19 .mockup-browser .m-header .m-line { height: 6px; }
+.slide19 .mockup-browser .m-body {
+  padding: 14px 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.slide19 .mockup-browser .s19-banner-green {
+  height: 52px;
+  margin: 0 14px;
+}
+.slide19 .mockup-browser .m-footer {
+  padding: 12px 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.slide19 .mockup-browser .m-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* =========================================
+   2. NATIVE
+   ========================================= */
+.slide19 .mockup-native {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.slide19 .mockup-native .s19-banner-green {
+  height: 80px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px;
+}
+.slide19 .mockup-native .s19-banner-green strong {
+  font-size: 11px;
+}
+.slide19 .mockup-native .s19-banner-green .link {
+  position: relative;
+  z-index: 1;
+  font-size: 9px;
+  color: rgba(255,255,255,0.8);
+}
+.slide19 .mockup-native .s19-banner-green::after {
+  right: -10px;
+  bottom: 0;
+  width: 80px;
+  height: 60px;
+  border-radius: 20px 0 0 0;
+}
+
+/* =========================================
+   3. VIDEO
+   ========================================= */
+.slide19 .mockup-video {
+  padding: 0;
+  background: #608d3e;
+}
+.slide19 .mockup-video .play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px; height: 44px;
+  border: 1px solid rgba(255,255,255,0.5);
+  background: rgba(0,0,0,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  padding-left: 2px;
+}
+.slide19 .mockup-video .v-text {
+  position: absolute;
+  top: 16px; left: 16px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.slide19 .mockup-video .v-controls {
+  position: absolute;
+  bottom: 12px; left: 16px; right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+.slide19 .mockup-video .v-controls i {
+  font-size: 9px;
+}
+.slide19 .mockup-video .v-controls span {
+  font-size: 9px;
+  font-weight: 500;
+}
+.slide19 .mockup-video .v-track {
+  flex: 1;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+}
+.slide19 .mockup-video .v-fill {
+  width: 30%;
+  height: 100%;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* =========================================
+   4. MOBILE
+   ========================================= */
+.slide19 .mockup-mobile {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 200px;
+  background: #18191c;
+  border: 4px solid #232529;
+  border-radius: 24px 24px 0 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.slide19 .mockup-mobile .m-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 12px;
+  background: #232529;
+  border-radius: 0 0 8px 8px;
+}
+.slide19 .mockup-mobile .m-box.large {
+  height: 48px;
+}
+.slide19 .mockup-mobile .s19-banner-green {
+  height: 44px;
+  margin-top: auto;
+  padding: 0 10px;
+}
+.slide19 .mockup-mobile .s19-banner-green strong { font-size: 9px; }
+.slide19 .mockup-mobile .s19-banner-green::after {
+  right: -5px; bottom: -2px; width: 30px; height: 26px;
+}
+
+/* =========================================
+   5. RICH MEDIA
+   ========================================= */
+.slide19 .mockup-rich {
+  background: #608d3e;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slide19 .mockup-rich strong {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+}
+.slide19 .mockup-rich .arrows {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+.slide19 .mockup-rich .arrows i {
+  width: 24px; height: 24px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 50%;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px;
+}
+.slide19 .mockup-rich .dots {
+  position: absolute;
+  bottom: 14px;
+  display: flex;
+  gap: 4px;
+}
+.slide19 .mockup-rich .dots i {
+  width: 4px; height: 4px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+}
+.slide19 .mockup-rich .dots i.active {
+  background: #fff;
+}
+
+/* =========================================
+   6. FEED AD (DYNAMIC REMARKETING)
+   ========================================= */
+.slide19 .mockup-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.slide19 .mockup-feed .feed-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+.slide19 .mockup-feed .feed-item {
+  background: rgba(255,255,255,0.03);
+  border-radius: 6px;
+  padding: 6px;
+}
+.slide19 .mockup-feed .f-img {
+  height: 36px;
+  background: #608d3e;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+.slide19 .mockup-feed .feed-item strong {
+  display: block;
+  color: #fff;
+  font-size: 8px;
+  margin-bottom: 2px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.slide19 .mockup-feed .feed-item span {
+  display: block;
+  color: #6a7177;
+  font-size: 7px;
+}

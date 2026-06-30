@@ -1,0 +1,219 @@
+.slide27 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #0c0c0e;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+}
+
+/* Background elements */
+.slide27 .s27-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.slide27 .s27-grid {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-position: center center;
+}
+
+.slide27 .s27-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.6;
+}
+
+.slide27 .glow-top {
+  top: -150px;
+  left: -150px;
+  width: 700px;
+  height: 700px;
+  background: rgba(180, 224, 25, 0.08);
+}
+
+.slide27 .glow-bottom {
+  bottom: -200px;
+  right: -200px;
+  width: 800px;
+  height: 800px;
+  background: rgba(180, 224, 25, 0.05);
+}
+
+/* LAYOUT */
+.slide27 .s27-wrap {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ------------------ LEFT COLUMN ------------------ */
+.slide27 .s27-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+}
+
+.slide27 .s27-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid rgba(180, 224, 25, 0.4);
+  background: rgba(0,0,0,0.4);
+  border-radius: 6px;
+  color: #b4e019;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  align-self: flex-start;
+}
+
+.slide27 .s27-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 24px 0;
+  letter-spacing: -1px;
+}
+
+.slide27 .s27-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.7);
+  margin: 0 0 80px 0;
+  max-width: 440px;
+}
+
+.slide27 .s27-logo {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+  letter-spacing: 4px;
+  margin-top: auto;
+}
+
+/* ------------------ RIGHT COLUMN ------------------ */
+.slide27 .s27-right {
+  flex-shrink: 0;
+}
+
+/* Contact Board */
+.slide27 .contact-board {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background: rgba(15, 17, 22, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 50px 60px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  backdrop-filter: blur(20px);
+}
+
+/* QR Column */
+.slide27 .qr-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.slide27 .qr-frame {
+  width: 160px;
+  height: 160px;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(180, 224, 25, 0.15);
+}
+
+.slide27 .qr-frame i {
+  font-size: 130px;
+  color: #000;
+}
+
+.slide27 .qr-scanner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #b4e019;
+  box-shadow: 0 0 10px #b4e019, 0 0 20px #b4e019;
+  animation: scan 2.5s infinite linear;
+}
+
+@keyframes scan {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.slide27 .qr-text {
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.4;
+}
+
+/* Info Column */
+.slide27 .info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+}
+
+.slide27 .info-col::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);
+}
+
+.slide27 .i-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.slide27 .i-lbl {
+  font-size: 11px;
+  color: #b4e019;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.slide27 .i-val {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
