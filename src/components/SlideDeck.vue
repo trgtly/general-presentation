@@ -26,11 +26,13 @@ import Slide24 from './slides/Slide24.vue'
 import Slide25 from './slides/Slide25.vue'
 import Slide26 from './slides/Slide26.vue'
 import Slide27 from './slides/Slide27.vue'
+import Slide28 from './slides/Slide28.vue'
+import Slide29 from './slides/Slide29.vue'
 
 const BASE_W = 1280
 const BASE_H = 800
 
-const slides = [Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, Slide7, Slide9, Slide10, Slide11, Slide12, Slide13, Slide14, Slide15, Slide16, Slide17, Slide18, Slide19, Slide20, Slide21, Slide22, Slide23, Slide24, Slide25, Slide26, Slide27]
+const slides = [Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, Slide7, Slide9, Slide10, Slide11, Slide12, Slide13, Slide14, Slide15, Slide16, Slide17, Slide18, Slide19, Slide20, Slide21, Slide22, Slide23, Slide24, Slide25, Slide26, Slide27, Slide28, Slide29]
 const current = ref(0)
 const scale = ref(1)
 
