@@ -19,11 +19,7 @@ const totalVisits = computed(() => {
   return sum.toFixed(1).replace('.', ',')
 })
 
-const costPerVisit = computed(() => {
-  const sum = chartData.reduce((acc, d) => acc + d.visits, 0)
-  const budget = 2600000 // Из карточки "Бюджет ЖК"
-  return Math.round(budget / sum).toLocaleString('ru-RU')
-})
+const costPerVisit = '282 608'
 
 const width = 500
 const height = 300
@@ -104,12 +100,12 @@ const callsPath = computed(() => {
             <div class="s29-kpi-head">РЕЗУЛЬТАТ ТАРГЕТИНГА</div>
             <div class="s29-kpi-metrics">
               <div class="s29-metric">
-                <span class="s29-metric-val">{{ totalVisits }}</span>
+                <span class="s29-metric-val">9,2</span>
                 <span class="s29-metric-lbl">визитов в офис<br>(Post-View)</span>
               </div>
               <div class="s29-metric">
-                <span class="s29-metric-val">{{ costPerVisit }} ₽</span>
-                <span class="s29-metric-lbl">цена одного<br>визита</span>
+                <span class="s29-metric-val">282 608</span>
+                <span class="s29-metric-lbl">цена одного<br>визита в офис</span>
               </div>
               <div class="s29-metric">
                 <span class="s29-metric-val">6 мес.</span>

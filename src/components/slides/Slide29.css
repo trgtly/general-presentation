@@ -120,7 +120,7 @@
   min-height: 0;
   flex: 1;
   display: grid;
-  grid-template-columns: 360px minmax(0, 1fr);
+  grid-template-columns: 420px minmax(0, 1fr);
   gap: 24px;
 }
 
@@ -165,7 +165,7 @@
 }
 
 .slide29 .s29-kpi-card.after .s29-kpi-metrics {
-  grid-template-columns: 1fr 1.2fr 1.2fr;
+  grid-template-columns: 0.9fr 1.3fr 1fr;
 }
 
 .slide29 .s29-metric {
@@ -181,6 +181,7 @@
   font-weight: 700;
   letter-spacing: -0.5px;
   color: #e5e9df;
+  white-space: nowrap;
 }
 
 .slide29 .s29-kpi-card.after .s29-metric-val {
