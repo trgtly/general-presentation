@@ -6,7 +6,6 @@ services:
     container_name: nginx
     restart: unless-stopped
     ports:
-      - "80:80"
       - "443:443"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
@@ -16,12 +15,17 @@ services:
       - pitch
 
   certbot:
-    image: certbot/certbot
+    image: certbot/certbot:latest
     container_name: certbot
+    network_mode: "host"
+    restart: always
     volumes:
       - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    entrypoint: >
+      /bin/sh -c "
+      certbot certonly --standalone --non-interactive --agree-tos --keep-until-expiring --email admin@targetly.ru -d pitch.targetly.ru &&
+      trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;
+      "
 
   pitch:
     image: ghcr.io/trgtly/pitch:latest
